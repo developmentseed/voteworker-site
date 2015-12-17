@@ -1,6 +1,11 @@
 // Charset
 @charset "UTF-8";
 
+//Foundation
+@import "settings";
+@import "./foundation-sites/scss/foundation";
+@include foundation-everything;
+
 // Libs
 @import "bourbon";
 // Reset and normalize

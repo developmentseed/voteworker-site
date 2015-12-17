@@ -3,6 +3,7 @@
 .lt-ie10 {
   #site-canvas {
     display: none;
+    background-color: #292c2f
   }
   #nocando {
     margin: 200px auto;
@@ -18,10 +19,133 @@
 }
 
 // Scss starts here!
+
 .header {
   padding-top: 160px;
   background: url("/assets/graphics/layout/DevelopmentSeed.png") no-repeat center;
   text-align: center;
+  position: relative;
   font-style: italic;
   font-size: 22px;
+}
+
+$background-color: #292c2f;
+$primary-color: dodgerblue;
+$dblue: #394471;
+$mblue: #5b6fb0;
+$lblue: #cfdde0;
+$hlred: #ef4137;
+$dred: #a31e22;
+
+$lgrey: #CCC;
+$dgrey: #666;
+
+.row {
+  max-width: 100%;
+}
+
+.menu {
+  background-color: $dblue;
+  font-family: garamond;
+  padding: 1.5rem 3rem;
+  height: auto;
+  .inline-list {
+    text-align: center;
+    li {
+      float: none;
+      display: inline-block;
+    }
+    a {
+      color: #fff;
+      padding-bottom: 0.5rem;
+      &:hover {
+        color: $primary-color;
+        transition: all .3s ease-in-out;
+      }
+    }
+    .active a {
+      color: $primary-color;
+    }
+  }
+  @media only screen and (min-width: 40.063em) {
+  height: 5rem;
+  .inline-list { 
+    float: right;
+    }
+    a:hover {
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+}
+
+.name {
+  text-align: center;
+  font-size:  1.5rem;
+  font-family: garamond;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  i {
+    color: $primary-color;
+    margin-right: 0.5rem;
+  }
+  @media only screen and (min-width: 40.063em) {
+    float: left;
+  }
+}
+
+
+.hero {
+  background: url('http://cdn.mntm.me/e9/1d/2f/White-House--US-Capitol-Building-Tours-e91d2fd531114f51b0af40c3ae7ba925.jpg') no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .6; 
+  }
+  .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.footer {
+  background-color: $dblue;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: garamond;
+  padding: 4rem; }
+
+  .footer p.slogan {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0 0 1rem; }
+   .footer p.slogan-description {
+    color: #8d9093;
+    font-size: 1.4rem;
+    margin: 0 0 1rem; } 
+  .footer p.copywrite {
+    color: #8f9296;
+    font-size: 0.875rem;
+    margin: 0; }
+  .footer .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3rem 0 2rem;
+    margin: 0; }
+    .footer .links a::after {
+      content: "•";
+      padding: 0 0.4rem 0 0.8rem; }
+    .footer .links a:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem; 
+  transform: translateY(-50%);
 }
