@@ -7,23 +7,39 @@ import Immutable from 'immutable';
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 const initialState = {
-  frontpage: {
-    name: 'something'
+  jurisdiction: {
+    id: null
+  },
+  stateChange: {
+    status: false
   }
 };
 
 
-const frontpage = function (state = {}, action) {
+const jurisdiction = function (state = {}, action) {
   switch (action.type) {
-    case 'TEST':
-      return Object.assign({}, state, { });
+    case 'FETCH_JURISDICTION':
+      return Object.assign({}, state, action.data);
     default:
       return state;
   }
 };
 
+const stateChange = function (state = {}, action) {
+  switch (action.type) {
+    case UPDATE_PATH:
+      return Object.assign({}, state, {status: true});
+    case 'CANCEL':
+      return Object.assign({}, state, {status: action.data})
+    default:
+      return state;
+  }
+}
+
+
 const rootReducer = combineReducers({
-  frontpage,
+  jurisdiction,
+  stateChange,
   routing: routeReducer
 });
 

@@ -5,7 +5,8 @@ node_js:
 env:
   global:
   - GH_REF=github.com/developmentseed/work.vote.git
-  - DEPLOY_BRANCH=master
+  - DEPLOY_BRANCH=develop
+  - secure: t7SDdMZDrYOf1oiMvlKeCHlb4XU6IewXnV2fBryIoceXEStbQP9Ygkc+fbc2cSEmXGTIsdZJZOA5089hM2qLaPRxVSQKKWHRXSCXuVuo0tV+KfTatYgsXg2atnI6ZJBcqv/ty7K1dhw1LMXgjtFyejsx7SW/kheD4ZuVO7bkOhprouUImiQU6Mwml7jLV1ZGiubHxO3vIUPym9yUvNv5CYA1ZQsoS2nuD5qRqks1ZTBD4M3Xz9GQaS2UjT/d9Jy9hmE9rEXWxOHlYTLWjc6M2zS+ldi3lmmfpK2+SbLmocJddNEiRwd/E0BHbjE/kDy+1PANKCtIGc1Ib/pzKjhiaQvG9k9jQDkMLiZUYB3CpD1DAsETv3wqTswFsb7sxWR3AgBeYvCkfX6AG+SaHtZQVl5PUoG72sjRIAOS9NE/R4YnowBFspmaj617t1T5jQUHTOUxgvX/J6u4NKkXnDlXgdDTp/zgpI7Nwxpun7eMoJIJe79yPy7R8RcFyOqU0+A/S6tuQoJPqo5h/H2Sn4KM8LqTgyE3gDrMwWkRv8U5T9+C+Zn98cbQtUK+6TtpAtfY6ZfJHR8MiQsBQnVrbsZQQEP72XIYcoTgPX+BZkXdLgXf8Vv4eJZwzvEq0Agf0200Uir2Kl2rt+MOSM/TZmdkn558RUWhRWZZIEV1/ISS5QQ=
 
 cache:
   directories:
@@ -16,8 +17,8 @@ before_install:
 - chmod +x ./.build_scripts/lint.sh
 
 before_script:
-- ./.build_scripts/lint.sh
-- npm test
+# - ./.build_scripts/lint.sh
+# - npm test
 
 script:
 - npm run build

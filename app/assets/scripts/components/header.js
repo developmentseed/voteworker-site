@@ -4,30 +4,26 @@ import { connect } from 'react-redux';
 
 let Header = React.createClass({
   render: function () {
-    console.log(this.props);
     return (
       <header>
-        <div className='row header-padding'>
-          <div className='small-12 small-centered columns text-center white'><h1>Work the Election</h1></div>
+        <div className='header-block'></div>
+        <div className='header-tinyblock'></div>
+        <div className='header-title white'>
+            <img src="assets/graphics/layout/us.svg"> Work the Election</img>
         </div>
-        <div className='row header-padding'>
-          <div className='small-3 columns text-center white'>Country Finder</div>
-          <div className='small-3 columns text-center white'>Work Summary</div>
-          <div className='small-3 columns text-center white'>Get Involved</div>
-          <div className='small-3 columns text-center white'>About</div>
+        <div className='header-links'>
+          <div className='row header-padding'>
+            <a href="/#map" className='white'>Jurisdiction Finder</a>
+            <a href="/" className='white'>Get Involved</a>
+            <a href="/" className='white'>About</a>
+          </div>
         </div>
       </header>
     );
   },
 });
 
-function mapStateToProps (state) {
-  return {
-    name: state.frontpage.name
-  };
-}
 
-export default connect(
-  mapStateToProps
-)(Header);
+
+export default Header;
 
