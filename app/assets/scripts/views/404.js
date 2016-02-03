@@ -9,7 +9,9 @@ let Empty = React.createClass({
   render: function () {
     return (
       <Box>
-        <div className='error-text'>[404] This is not the webpage you are looking for!</div>
+        <div className='error-text'>      	
+        	<div className='error-number'>404</div>
+					This is not the webpage you are looking for!</div>
       </Box>
     );
   }
