@@ -52,11 +52,19 @@ let MapClass = function (el, states) {
           .attr('d', path)
           .style('fill', function (d) {
             if (self.states.indexOf(d.id) !== -1) {
-              return '#a31e22';
+              return '#a55873';
             } else if (self.states_incomplete.indexOf(d.id) !== -1) {
-              return '#BA6A6D';
+              return '#d6a6b7';
             }
           })
+          .style('cursor', function (d){
+            if (self.states.indexOf(d.id) !== -1) {
+              return 'pointer';
+            } else if (self.states_incomplete.indexOf(d.id) !== -1) {
+              return 'pointer';
+            }
+          })
+          .style('transition', 'fill 0.2s')
           .on('mouseover', self.hover)
           .on('mouseout', self.hoverEnds)
           .on('click', self.click);
@@ -70,19 +78,19 @@ let MapClass = function (el, states) {
 
   self.hover = function (d, i) {
     if (self.states.indexOf(d.id) !== -1) {
-      d3.select(this).style('fill', '#394471');
+      d3.select(this).style('fill', '#d85a7a');
     } else if (self.states_incomplete.indexOf(d.id) !== -1) {
-      d3.select(this).style('fill', '#394471');
+      d3.select(this).style('fill', '#efacc4');
     }
   };
 
   self.hoverEnds = function (d) {
     if (self.states.indexOf(d.id) !== -1) {
-      d3.select(this).style('fill', '#a31e22');
+      d3.select(this).style('fill', '#a55873');
     } else if (self.states_incomplete.indexOf(d.id) !== -1) {
-      d3.select(this).style('fill', '#BA6A6D');
+      d3.select(this).style('fill', '#d6a6b7');
     } else {
-      d3.select(this).style('fill', '#aaa');
+      d3.select(this).style('fill', '#cccccc');
     }
   };
 

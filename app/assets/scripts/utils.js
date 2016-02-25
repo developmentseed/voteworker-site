@@ -66,6 +66,6 @@ export function shape (el, geojson) {
 
   vis.selectAll('path').data([geojson]).enter().append('path')
     .attr('d', path)
-    .style('fill', '#a5a5a5')
+    .style('fill', '#ccc')
     .style('stroke-width', '1');
 };
