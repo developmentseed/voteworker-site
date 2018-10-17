@@ -486,7 +486,6 @@ a:focus{
 }
 
 .callout.secondary{
-  background-color: $dred;
   margin-bottom: 0px;
   padding: 20px 30px 30px 30px;
 }
@@ -534,7 +533,7 @@ a:focus{
 h5{
   font-weight: 500;
   font-size: 1em;
-  color: darken(white, 15%);
+  color: $dgrey;
   margin-bottom:10px;
 }
 
