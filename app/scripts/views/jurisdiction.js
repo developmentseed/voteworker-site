@@ -155,11 +155,11 @@ class Jurisdiction extends React.Component {
                 <When condition={ jurisdiction.interview === 'Y' }>
                   <li><p>People who sign up to work on Election Day are interviewed.</p></li>
                 </When>
-                <When condition={ jurisdiction.pre_registration === 'N' }>
+                <When condition={ jurisdiction.interview === 'N' }>
                   <li><p>There is no interview.</p></li>
                 </When>
                 <Otherwise>
-                  <Conditional title='Interview:' value={jurisdiction.interview} />
+                  <span></span>
                 </Otherwise>
               </Choose>
 
