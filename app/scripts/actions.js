@@ -96,7 +96,7 @@ export function fetchJurisdiction (id) {
   return (dispatch) => {
     dispatch(resetJurisdiction());
     let jurisdiction;
-    const geometryUrl = `${config.apiUrl}/jurisdictions/${id}/geojson`;
+    const geometryUrl = `${config.apiUrl}/jurisdictions/${id}/geojson/`;
     ky.get(`${config.apiUrl}/jurisdictions/${id}/`).json()
       .then((resp) => {
         jurisdiction = resp;
